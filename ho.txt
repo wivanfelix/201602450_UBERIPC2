@@ -1,0 +1,109 @@
+Git: 201602450_UBERIPC2
+
+Cliente:
+#Id_Cliente, Int
+*Nombre, String
+*Apellido, String
+*Edad, Int
+*Tarjeta_Credito, Int
+*Codigo_Tarjeta, Int
+*Vencimiento_Tarjeta, Date
+*Viajes, Int
+
+Orden_Servicio
+#Id_Orden, Int
+(#)Cliente, Int
+(#)PSV, Int
+*Costo_Orden, Int
+
+Id_ PSV
+#Id_PSV, Int
+(#)Id_PV, Int
+(#)Servicio, Int
+
+Piloto_Vehiculo
+#Id_PV, Int
+(#)Piloto, Int
+(#)Vehiculo, Int
+
+Vehiculo
+#Id_Vehiculo, Int
+*Tipo_V, String
+*Desc_V, String
+
+Piloto
+#Id_Piloto, Int
+*Nombre, String
+*Apellido, String
+*Telefono, Int
+*Valoracion, Int
+
+
+UberX
+#Id_Uberx, Int
+*Direccion_Incial, String
+*Direccion_Final, String
+*Pasajeros, Int
+
+UberRush
+#Id_UberRush, Int
+*Direccion_Incial, String
+*Direccion_Final, String
+
+UberBlack
+#Id_UberBlack, Int
+*Direccion_Inicial, String
+*Direccion_Final, String
+
+UberXL
+#Id_UberXL, Int
+*Direccion_Incial, String
+*Direccion_Final, String
+*Pasajeros, Int
+
+UberSUV
+#Id_UberXL, Int
+*Direccion_Incial, String
+*Direccion_Final, String
+*Pasajeros, Int
+
+UberPool
+#Id_Pool, Int
+*Direccion_Incial_1, String
+*Direccion_Incial_2, String
+*Direccion_Incial_3, String
+*Direccion_Final, String
+*Pasajeros, Int
+
+UberVIP
+#Id_UberVIP, INT
+*Direccion_Incial, String
+*Direccion_Final, String
+*Pasajeros, Int
+
+UberAngel
+#Id_UberAngel, Int
+*Direccion_Incial, String
+
+UberBici
+#Id_UberBici, Int
+*Direccion_Incial, String
+*Tiempo_Prestamo, Int
+
+UberEats
+#Id_UberEats, Int
+*Direccion_Incial, String
+*Restaurante, String
+*Orden, String
+
+UberUnderage
+#Id_UberUnderage, Int
+*Direccion_Incial, String
+
+UberChopper
+#Id_UberChopper, Int
+*Direccion_Incial, String
+*Tiempo_Prestamo, Int
+
+
+ 	

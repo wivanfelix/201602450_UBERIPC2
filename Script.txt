@@ -1,0 +1,49 @@
+GO
+USE MASTER
+go
+drop database db_UberIPC2
+GO
+CREATE DATABASE db_UberIPC2
+go
+USE db_UberIPC2
+GO
+
+CREATE TABLE Cliente(
+	id_Cliente int identity(1,1) primary key,
+	Nombre varchar(255) not null,
+	Apellido varchar(255), not null
+	Edad int(2), not null
+	Tarjeta_Creadito, varchar(20), not null
+	Codio_Tarjeta, varchar(3), not null
+	Vencimiento_Tarjeta, date, not null
+	
+)
+
+CREATE TABLE Piloto(
+	id_Piloto int, primary key,
+	Nombre varchar(255) not null,
+	Apellido varchar(255) not null,
+	Telefono int(8), not null
+	valoracion int(3), not null
+	
+)
+
+CREATE TABLE Vehiculo(
+	id_Vehiculo int, primary key,
+	Tipo_Vehiculo varchar(255) not null,
+	Descripcion varchar(255), not null
+	
+)
+
+CREATE TABLE Piloto_Vehiculo(
+	id_PV int identity(1,1) primary key,
+	foreign key(Piloto) references Piloto(id_Piloto),
+	foreign key(Vehiculo) references Vehiculo(id_Vehiculo)
+)
+
+CREATE TABLE UberX(
+	id_Uberx int, primary key,
+	Tipo_Vehiculo varchar(255) not null,
+	Descripcion varchar(255), not null
+	
+)
